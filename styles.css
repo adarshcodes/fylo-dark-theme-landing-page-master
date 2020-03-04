@@ -39,17 +39,34 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5rem;
   background-image: url('images/bg-curvy-desktop.svg');
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 100% 35%;
   background-position: bottom;
+  padding-top: 5rem;
   color: #fff;
   text-align: center;
 }
 
 .intro-png {
   width: 65rem;
+  animation: intro-animate 8s infinite;
+}
+
+@keyframes intro-animate {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-3rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
 }
 
 .intro-heading {
@@ -66,4 +83,63 @@ body {
   width: 35%;
   margin-top: 1rem;
   letter-spacing: .2rem;
+}
+
+.intro-btn {
+  width: 20rem;
+  padding: 1.5rem 0 1.3rem 0;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Raleway',serif;
+  background: linear-gradient(90deg, #03a9f4, #00B1D2, #00DCD5, #03a9f4);
+  background-size: 400%;
+  border-radius: 5rem;
+  z-index: 1;
+  position: relative;
+  outline: none;
+  border: none;
+  margin: 3rem 0 15rem 0;
+  transition: transform .5s;
+}
+
+.intro-btn:active {
+  transform: translateY(2rem);
+}
+
+.intro-btn:hover {
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
+
+.intro-btn:before {
+  content: '';
+  position: absolute;
+  top: -.5rem;
+  bottom: -.5rem;
+  right: -.5rem;
+  left: -.5rem;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #00B1D2, #00DCD5, #03a9f4);
+  background-size: 200%;
+  border-radius: 15rem;
+  opacity: 0;
+  transition: .5s;
+}
+
+.intro-btn:hover:before {
+  filter: blur(6rem);
+  opacity: 1;
+  animation: animate 6s linear infinite;
 }
