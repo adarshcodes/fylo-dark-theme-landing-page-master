@@ -289,6 +289,7 @@ body {
   align-items: center;
   margin: 15rem 15rem 0 15rem;
   color: #fff;
+  padding-bottom: 10rem;
 }
 
 .comments-cards {
@@ -345,6 +346,15 @@ body {
 .designation {
   font-size: 1rem;
   margin-top: .2rem;
+}
+
+/* End of Middle-Section */
+
+/* Footer */
+
+.footer-section {
+  background: linear-gradient(to bottom, #171E2B 18%, #00252E 15%, #00252E 15%, #00252E 95%, #00252E 100%);
+  padding-top: 15rem;
 }
 
 .merged-access-card {
@@ -416,9 +426,26 @@ body {
   transform: translateX(3rem);
 }
 
-/* End of Middle-Section */
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #131A29;
+  /* padding-top: 35rem; */
+  color: #fff;
+}
 
-/* Footer */
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
+.litem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
 /* End of Footer */
